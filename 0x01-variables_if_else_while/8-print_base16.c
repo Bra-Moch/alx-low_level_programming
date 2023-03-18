@@ -10,7 +10,7 @@ int main(void)
 	char digit;
 	char letter;
 
-	for (digit = '0'; digit < '10'; digit++)
+	for (digit = 0; digit < 10; digit++)
 		putchar(digit + '0');
 
 	for (letter = 'a'; letter <= 'f'; letter++)
