@@ -1,7 +1,8 @@
 #include "main.h"
+
 /**
  * main - Entry point
- * Description:The program should return 0
+ *
  * Return: 0
  */
 
