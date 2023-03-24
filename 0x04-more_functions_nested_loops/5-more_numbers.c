@@ -1,29 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * more_numbers - print numbers from 0 to 14 10x
- *
- * Return: void data type
+ * more_numbers - nmbr fct
+ * Bwave ICT file
+ * Return: no return
  */
 
 void more_numbers(void)
 {
-	int k;
-	int q;
 
-	for (k = 0; k <= 14; k++)
+int i, j;
+	for (i = 1; i <= 10; i++)
 	{
-		for (q = 0; q <= 9; q++)
+		for (j = 0; j <= 14; j++)
 		{
-			if (k > 9)
-			{
-				_putchar(k / 10 + '0');
-			}
-			_putchar(k % 10 + '0');
-
-		_putchar('\n');
-
+			if (j >= 10)
+			_putchar('1');
+			_putchar(j % 10 + '0');
 		}
-	}
+			_putchar('\n');
+		}
 }
