@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
-* print_rev - printing a string in reverse
-* @dest: the string to be printed in reverse
-* @src: this is the copied file 
-* Return: copy of the source
-*/
+ * _strcpy - copies the string pointed to by src
+ * @dest: copy source to this buffer
+ * @src: this is the source to copy
+ * Return: copy of original source
+ */
 
 char *_strcpy(char *dest, char *src)
 {
