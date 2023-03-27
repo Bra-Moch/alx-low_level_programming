@@ -2,20 +2,18 @@
 
 /**
 * print_rev - printing a string in reverse
-* @s: the string to be printed in rev
+* @s: the string to be printed in reverse
+* Return: copy of the source
 */
 
-void print_rev(char *s)
+char *_strcpy(char *dest, char *src)
 {
-	int i, n;
+	int i = 0;
 
-	n = 0;
-	while (s[n] != '\0')
-		n++;
+	while (*src)
+		dest[i++] = *src++;
 
-	for (i = n - 1; i >= 0; i--)
-	{
-		_putchar(s[i]);
-	}
-	_putchar('\n');
+	dest[i] = '\0';
+
+	return (dest);
 }
