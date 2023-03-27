@@ -2,7 +2,8 @@
 
 /**
 * print_rev - printing a string in reverse
-* @s: the string to be printed in reverse
+* @dest: the string to be printed in reverse
+* @src: this is the copied file 
 * Return: copy of the source
 */
 
