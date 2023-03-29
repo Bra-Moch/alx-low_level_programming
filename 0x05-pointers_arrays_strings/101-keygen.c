@@ -3,6 +3,7 @@
 #include <time.h>
 
 #define pass_len 10
+
 /**
  * main - Generates random valid passwords for the program 101-crackme.
  *
@@ -12,20 +13,18 @@
 
 int main(void)
 {
-	int i, total = 2772;
-	int ascii_value;
+	int myrand;
+	int count;
+	int total;
 
 	srand(time(NULL));
-	/* initialize random number generator */
-
-	for (i = 0; i < pass_len; i++)
+	for (count = 0, total = 2772; total > 122; count++)
 	{
-		ascii_value = rand() % 125 + 1;
-		/* generate a random ASCII value between 1 and 125 (inclusive) */
-
-		printf("%c", ascii_value);
-		total -= ascii_value;
+		myrand = (rand() % 125) + 1;
+		printf("%c", myrand);
+		total -= myrand;
 	}
 	printf("%c", total);
+
 	return (0);
 }
