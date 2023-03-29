@@ -13,7 +13,6 @@
 int main(void)
 {
 	int i, total = 2772;
-	char password[pass_len + 1];
 	int ascii_value;
 
 	srand(time(NULL));
