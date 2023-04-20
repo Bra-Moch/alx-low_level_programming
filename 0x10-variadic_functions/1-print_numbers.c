@@ -2,39 +2,32 @@
 #include <stdio.h>
 
 /**
- * print_numbers - prints a variable number of integers, separated by a string
- *                 and a newline character
- * @separator: the string to print between integers
- * @n: the number of integers to print
- * @...: the integers to print
+ * print_numbers - a function that print numbers, followed by a new line.
  *
- * Description: This funct prints a variable number of ints, separated by
- * the provided string, followed by a newline character. If the separator
- * argument is NULL, it is not printed.
- */
+ * @separator: pointer to constant separator
+ * @n: start of input variables
+ *
+ * Return: nothing
+*/
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	va_list args;
-	unsigned int i;
+	va_list ap;
+	unsigned int index;
 
-	/* Initialize argument list */
-	va_start(args, n);
+	/* initialize the argument list from the start */
+	va_start(ap, n);
 
-	/* Iterate over the integer arguments */
-	for (unsigned int i = 0; i < n; i++)
+	/* iterate through each argument*/
+	for (index = 0; index < n; index++)
 	{
-		printf("%d", va_arg(args, int))
-		/* Print the next integer */
-
-	/* Print separator if not at end and separator argument is not NULL */
-		if (separator != NULL && i != n - 1)
-		{
+		/* print next argument */
+		printf("%d", va_arg(ap, int));
+		/* print separator only between arguments */
+		if (separator && index != n - 1)
 			printf("%s", separator);
-		}
 	}
-
-	/* Clean up argument list */
-	va_end(args);
+	/*clean up*/
+	va_end(ap);
 	printf("\n");
 }
